@@ -1,0 +1,28 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trepanation-pray/personal.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Personal",
+    "Website"
+  ],
+  "author": "Steven Hill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trepanation-pray/personal/issues"
+  },
+  "homepage": "https://github.com/trepanation-pray/personal#readme",
+  "scripts": {
+    "serve": "npx eleventy --serve",
+    "production": "npx eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
