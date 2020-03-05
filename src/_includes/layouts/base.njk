@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+		<style>
+		body {
+			margin: 0;
+			padding: 50px;
+			text-align: center;
+			font-family: 'Lato', sans-serif;
+			line-height: 1.5;
+			color: #1E1E26;
+		}
+		svg {
+			width: 100%;
+			max-width: 300px;
+		}
+		h1 {
+		}
+		</style>
+	</head>
+	<body>
+		{{ content | safe }}
+  </body>
+</html>
