@@ -1,0 +1,8 @@
+{% macro item(url, name, description, currentPage) %}
+  <li class="o-site-navigation__item{%if currentPage == url %} o-site-navigation__item--current{% endif %}">
+    <a href="/{{ url }}" class="o-site-navigation__link">
+      {{ name }}
+      <span class="o-site-navigation__description">{{ description }}</span>
+    </a>
+  </li>
+{% endmacro %}

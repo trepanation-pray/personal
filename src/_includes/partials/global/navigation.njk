@@ -1,3 +1,9 @@
-<nav>
-  This is the navigation
-</nav>
+{% import "partials/macro/nav-item.njk" as nav %}
+  <nav class="o-site-navigation">
+    <ul class="o-site-navigation__list">
+      {{ nav.item('', 'Home', 'Return to the home page', page.fileSlug) }}
+      {{ nav.item('about', 'About', 'A little bit about me', page.fileSlug) }}
+      {{ nav.item('projects', 'Projects', 'View the projects I\'ve worked on', page.fileSlug) }}
+      {{ nav.item('writing', 'Writing', 'Read my latest posts', page.fileSlug) }}
+    </ul>
+  </nav>
