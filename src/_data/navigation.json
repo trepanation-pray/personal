@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "",
+    "name": "Home",
+    "description": "Return to the home page"
+  },
+  {
+    "slug": "about",
+    "name": "About",
+    "description": "A little bit about me"
+  },
+  {
+    "slug": "projects",
+    "name": "Projects",
+    "description": "View the projects I've worked on"
+  },
+  {
+    "slug": "writing",
+    "name": "Writing",
+    "description": "Read my latest posts"
+  }
+]
