@@ -8,8 +8,10 @@
 	<body>
     <a href="#main-content" class="c-skip-to-content">Skip to the content</a>
     {% include "partials/global/header.njk" %}
-    {% block content %}
-    {% endblock %}
+    <main id="main-content" class="o-main-content">
+      {% block content %}
+      {% endblock %}
+    </main>
     {% include "partials/global/footer.njk" %}
   </body>
 </html>

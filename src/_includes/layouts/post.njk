@@ -2,8 +2,6 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-  <main>
-    {% include "partials/page/hero.njk" %}
-    {{ content | safe }}
-  </main>
+  {% include "partials/page/hero.njk" %}
+  {{ content | safe }}
 {% endblock %}
