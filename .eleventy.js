@@ -5,6 +5,7 @@ const sass = require('./src/_config/sass-process.js');
 
 module.exports = config => {
   //Watching for modificaions in style directory
+  config.addWatchTarget("./src/assets/scss/");
   sass('./src/assets/scss/main.scss', './dist/assets/css/main.css');
   return {
     dir: {
