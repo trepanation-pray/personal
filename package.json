@@ -23,6 +23,7 @@
     "production": "npx eleventy"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.10.0",
+    "node-sass-promise": "^1.0.0"
   }
 }
