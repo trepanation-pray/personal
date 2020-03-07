@@ -1,3 +1,23 @@
-body {
-  background: lightgray;
-}
+// Node modules
+
+
+// Common
+@import "common/variables";
+@import "common/colours";
+@import "common/global";
+@import "common/fonts";
+@import "common/typography";
+
+//Components
+@import "components/buttons";
+@import "components/pagination";
+@import "components/forms";
+
+// Layouts
+@import "layouts/header";
+@import "layouts/navigation";
+@import "layouts/page-header";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/projects";
