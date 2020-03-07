@@ -17,7 +17,6 @@ module.exports = (scssPath, cssPath) => {
     fs.watch(path.dirname(scssPath), () => {
         //Render css from sass...
         sass.render({file: scssPath})
-        .then(browserSync.reload)
         //Then write result css string to cssPath file
         .then(result => fs.writeFile(cssPath, result.css.toString()))
         .catch(error => console.error(error))
