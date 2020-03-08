@@ -19,11 +19,14 @@
   },
   "homepage": "https://github.com/trepanation-pray/personal#readme",
   "scripts": {
-    "serve": "npx eleventy --serve",
-    "production": "npx eleventy"
+    "sass:process": "node-sass src/assets/scss -o dist/assets/css",
+    "sass:watch": "node-sass --watch src/assets/scss -o dist/assets/css",
+    "serve": "concurrently \"npx eleventy --serve\" \"npm run sass:watch\"",
+    "production": "npx eleventy && npm run sass:process"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "node-sass-promise": "^1.0.0"
+    "node-sass": "^4.13.1",
+    "concurrently": "^4.1.0"
   }
 }
