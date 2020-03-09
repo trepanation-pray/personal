@@ -1,0 +1,20 @@
+.o-site-navigation {
+  &__list {
+
+  }
+  &__item {
+    &--current {
+
+    }
+  }
+  &__link {
+    font-size: bold;
+  }
+  &__label {
+
+  }
+  &__description {
+    color: white;
+    display: block;
+  }
+}
