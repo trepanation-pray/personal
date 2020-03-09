@@ -1,0 +1,8 @@
+@function color( $key: 'primary', $opacity: 1) {
+  @if( opacity == 1) {
+    @return map-get($theme-colors, $key);
+  }
+  @else {
+    @return rgba( map-get($theme-colors, $key), $opacity );
+  }
+}
