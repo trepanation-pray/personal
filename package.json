@@ -27,6 +27,6 @@
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
     "node-sass": "^4.13.1",
-    "concurrently": "^4.1.0"
+    "concurrently": "^5.1.0"
   }
 }
