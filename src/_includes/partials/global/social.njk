@@ -1,0 +1,11 @@
+<nav class="c-social-media">
+  <ul class="c-social-media__list">
+    {% for item in social %}
+      <li class="c-social-media__item">
+        <a href="{{ item.url }}" target="_blank" class="c-social-media__link c-social-media__link--{{ item.slug }}">
+          <span class="c-social-media__label">{{ item.label }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
