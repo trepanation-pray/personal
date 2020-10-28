@@ -1,0 +1,14 @@
+@mixin breakpoint($size) {
+  $min: map-get($breakpoints, $size);
+  @if (str-index($size, 'px')) {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
