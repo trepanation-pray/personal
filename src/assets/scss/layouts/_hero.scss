@@ -1,0 +1,61 @@
+@keyframes fade {
+  0% {
+    background-position: center, bottom left;
+  }
+  50% {
+    background-position: center, top right;
+  }
+  0% {
+    background-position: center, bottom left;
+  }
+}
+.o-hero {
+  height: 100vh;
+  width: 100%;
+  animation-iteration-count: infinite;
+  animation-duration: 60s;
+  animation-name: fade;
+  background: {
+    image: url('../images/marble-ink-05.jpg'),
+      linear-gradient(45deg, color(blue), color(orange),color(green),color(pink),color(purple),color(blue));
+    blend-mode: overlay;
+    repeat: no-repeat;
+    size: cover, 500% 100%;
+    position: center, left;
+    attachment: fixed;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content {
+    position: relative;
+    text-align: center;
+    padding: 4rem;
+    display: inline-block;
+    color: color(light);
+    border-radius: 10px;
+    background: color(dark);
+    background: {
+      color: color(dark);
+      image: url('../images/background-light.png');
+      repeat: no-repeat;
+      // blend-mode: color-dodge;
+      size: 1000px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      right: 2rem;
+      bottom: 2rem;
+      border-radius: 5px;
+      border: 2px solid color(light,.5);
+    }
+  }
+  &__description {
+    color: color(light);
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}

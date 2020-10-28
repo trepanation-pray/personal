@@ -1,7 +1,34 @@
 body {
   background-color: color(light);
   font: {
-    family: arial, sans-serif;
+    family: 'Gotham', sans-serif;
     size: 16px;
   }
+  // grid-template-rows: [header] 20rem [content];
+  @include breakpoint(lg) {
+    display: grid;
+    grid-template-columns: [header] 20rem [content];
+    
+  }
+  color: color(dark);
+}
+
+main {
+  height: 100vh;
+}
+.o-main-content {
+  height: 5000px;
+  background: {
+    color: color(light);
+    image: url('../images/background.png');
+    repeat: no-repeat;
+    position: left 500px;
+  }
+}
+.o-content-wrap {
+  padding: 2rem;
+  max-width: 1000px;
+}
+a {
+  color: color(dark);
 }

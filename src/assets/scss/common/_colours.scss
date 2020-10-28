@@ -1,8 +1,23 @@
-@function color( $key: 'primary', $opacity: 1) {
+@function color( $key: 'blue', $opacity: 1) {
   @if( opacity == 1) {
     @return map-get($theme-colors, $key);
   }
   @else {
     @return rgba( map-get($theme-colors, $key), $opacity );
   }
+}
+
+@each $color-name, $color-value in $theme-colors {
+	.u-color--#{$color-name} {
+		color: $color-value;
+		path & {
+			fill: $color-value;
+		}
+	}
+	.u-bg--#{$color-name} {
+		background-color: $color-value;
+	}
+	.u-border-color--#{$color-name} {
+		border-color: $color-value;
+	}
 }

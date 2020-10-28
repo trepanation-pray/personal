@@ -1,12 +1,28 @@
 $theme-colors: (
-  primary: #6ccff6,
-  secondary: #f89e33,
-  tertiary: #62d567,
-  quarternary: #f54884,
-  light: #f3f3f3,
+  blue: #6ccff6,
+  orange: #f89e33,
+  green: #62d567,
+  pink: #f54884,
+  purple: #a942a9,
+  light: #fff9f1,
   mid: #5c5c5c,
   dark: #2e2e2e,
   success: green,
   warning: orange,
   error: tomato,
+);
+
+$breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Extra Extra large screen / wide desktop
+  xxl: 2000px
 );

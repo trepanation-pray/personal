@@ -1,0 +1,38 @@
+.o-page-header {
+  margin-bottom: 2rem;
+  display: block;
+  padding: 20rem 5rem 5rem 0;
+    background: {
+    image: url('../images/MarbleTexture05-byGhostlyPixels.png');
+    blend-mode: overlay;
+    repeat: no-repeat;
+    size: cover;
+    attachment: fixed;
+  }
+  &__content {
+    padding: 2rem;
+    display: inline-block;
+    border-radius: 0 10px 10px 0;
+    background: {
+      color: color(light);
+      image: url('../images/background.png');
+      repeat: no-repeat;
+      size: 1000px;
+    }
+  }
+  &__title {
+  }
+  &__description {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    &:before {
+      opacity: .5;
+      margin-bottom: 1rem;
+      // content: '';
+      height: 2px;
+      width: 25%;
+      display: block;
+      background: currentColor;
+    }
+  }
+}

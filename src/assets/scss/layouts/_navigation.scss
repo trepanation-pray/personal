@@ -1,20 +1,65 @@
 .o-site-navigation {
+  display: none;
+  @include breakpoint(lg) {
+    display: block;
+  }
   &__list {
 
   }
   &__item {
+    position: relative;
+    padding: 1.25rem 0 1rem;
+    border-bottom: 2px solid color(light,.25);
+    & + & {
+    }
     &--current {
-
+      &:before {
+        content: '';
+        height: 2.65rem;
+        width: .5rem;
+        position: absolute;
+        top: 1.25rem;
+        left: -2rem;
+        background: currentColor;
+      }
+    } 
+    &:nth-child(1){
+      color: color(blue);
+    }
+    &:nth-child(2){
+      color: color(orange);
+    }
+    &:nth-child(3){
+      color: color(green);
+    }
+    &:nth-child(4){
+      color: color(pink);
+    }
+    &:nth-child(5){
+      color: color(purple);
     }
   }
   &__link {
-    font-size: bold;
+    display: block;
+    transition: .3s;
+    &:hover {
+      transform: translateX(.25rem);
+    }
+    color: inherit;
   }
   &__label {
+    line-height: 1;
+    display: block;
+    font: {
+      weight: bold;
+      size: 1.5rem;
+    }
 
   }
   &__description {
     color: white;
-    display: block;
+    line-height: 1;
+    text-shadow: 0 0 5px color(dark);
+    display: inline-block;
   }
 }

@@ -1,12 +1,25 @@
+
+// variables
+@import "common/variables";
+
 // Node modules
+@import "./node_modules/@trepanation-pray/svg-encode/main.scss";
+
+// Functions
+@import "functions/breakpoints";
 
 // Common
-@import "common/variables";
-@import "common/colours";
 @import "common/reset";
-@import "common/global";
+
+
+@import "common/colours";
+
 @import "common/fonts";
 @import "common/typography";
+
+@import "common/helpers";
+@import "common/global";
+
 
 //Components
 @import "components/buttons";
@@ -16,6 +29,8 @@
 // Layouts
 @import "layouts/header";
 @import "layouts/navigation";
+@import "layouts/social-media";
+@import "layouts/hero";
 @import "layouts/page-header";
 @import "layouts/footer";
 @import "layouts/pages";
