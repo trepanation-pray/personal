@@ -12,11 +12,16 @@
   {
     "slug": "projects",
     "name": "Projects",
-    "description": "View the projects I've worked on"
+    "description": "View my projects"
   },
   {
     "slug": "writing",
     "name": "Writing",
     "description": "Read my latest posts"
+  },
+  {
+    "slug": "contact",
+    "name": "Contact",
+    "description": "Get in touch with me"
   }
 ]
