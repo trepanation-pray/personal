@@ -1,5 +1,8 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-  {{ content | safe }}
+  {% include "partials/page/header.njk" %}
+  <div class="o-content-wrap">
+    {{ content | safe }}
+  </div>
 {% endblock %}
