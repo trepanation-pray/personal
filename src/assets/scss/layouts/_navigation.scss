@@ -1,15 +1,111 @@
-.o-site-navigation {
-  display: none;
-  @include breakpoint(lg) {
+.o-mobile-navigation-button {
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 50%;
+	z-index: 10;
+	transition: 0.5s;
+	outline: none;
+  border: none;
+  position: relative;
+  background: none;
+  &__text {
+    position: absolute;
+    right: calc( 100% + 1rem );
+    top: 0;
+    color: color(light);
+    line-height: 2.5rem;
+  }
+  &__bar {
     display: block;
+    background: color(light);
+    height: 3px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    border-radius: 10px;
+    &--1 {
+      top: 10px;
+      width: 2rem;
+      transform: translate(0, 0);
+    }
+    &--2 {
+      width: 1.5rem;
+      transform: translate(0, -50%);
+      top: 50%;
+    }
+    &--3 {
+      bottom: 10px;
+      width: 1.75rem;
+      transform: translate(0, 0);
+    }
+  }
+  &.is-active {
+    .o-mobile-navigation-button__bar--1 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .o-mobile-navigation-button__bar--2 {
+      opacity: 0;
+      
+    }
+    .o-mobile-navigation-button__bar--3 {
+      top: 50%;
+      left: 50%;
+      width: 2rem;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  &:hover {
+    .o-mobile-navigation-button__bar {
+      width: 2rem;
+    }
+  }
+	&:focus {
+		outline: none;
+	}
+	@include breakpoint(lg) {
+		display: none;
+	}
+}
+
+.o-site-navigation {
+  position: absolute;
+  top: 4.5rem;
+  width: calc(100% - 2rem);
+  @include breakpoint(lg) {
+    top: 0;
+    width: auto;
+    position: relative;
   }
   &__list {
-
   }
   &__item {
     position: relative;
     padding: 1.25rem 0 1rem;
     border-bottom: 2px solid color(light,.25);
+    transition: .5s;
+    opacity: 0;
+    transform: translatey(-2rem);
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}n) {
+        transition-delay: #{$i * .1 + .25}s;
+        transition-property: opacity, transform;
+        @include breakpoint(lg) {
+          transition-delay: 0s;
+        transition-property: opacity, transform;
+        }
+      }
+    }
+    .menu-active & {
+      opacity: 1;
+      transform: translatey(0);
+    }
+    @include breakpoint(lg) {
+      opacity: 1;
+      transform: translatey(0);
+    }
     & + & {
     }
     &--current {

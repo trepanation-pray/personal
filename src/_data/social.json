@@ -1,27 +1,27 @@
 [
   {
     "slug": "twitter",
-    "label": "Follow me on Twitter",
+    "label": "Twitter",
     "url": "https://twitter.com/trepanation"
   },
   {
     "slug": "instagram",
-    "label": "View my Instagram",
+    "label": "Instagram",
     "url": "https://www.instagram.com/trepanationpray"
   },
   {
     "slug": "dribbble",
-    "label": "View my shots on Dribbble",
+    "label": "Dribbble",
     "url": "https://dribbble.com/steven-hill"
   },
   {
     "slug": "github",
-    "label": "View my commits",
+    "label": "Github",
     "url": "https://github.com/trepanation-pray"
   },
   {
     "slug": "linkedin",
-    "label": "Connect with me on Linkedin",
+    "label": "Linkedin",
     "url": "https://www.linkedin.com/in/steve-hill-design-code"
   }
 ]

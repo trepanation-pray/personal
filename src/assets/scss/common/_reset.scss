@@ -52,6 +52,9 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
+img,svg {
+  vertical-align: middle;
+}
 img {
   max-width: 100%;
   display: block;

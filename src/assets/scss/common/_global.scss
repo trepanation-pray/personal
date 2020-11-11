@@ -8,9 +8,12 @@ body {
   @include breakpoint(lg) {
     display: grid;
     grid-template-columns: [header] 20rem [content];
-    
   }
   color: color(dark);
+  &.menu-active {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 main {

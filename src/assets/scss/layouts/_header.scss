@@ -1,35 +1,45 @@
 .o-site-header {
-  padding: 0 2rem;
+  padding: 1rem;
   position: relative;
+  z-index: 10;
   display: flex;
-
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 4.5rem;
+  transition: .5s;
+  overflow: hidden;
   background: {
     color: color(dark);
     image: url('../images/background-light.png');
     repeat: no-repeat;
   }
+  clip: rect(0, auto, auto, 0);
+  &.is-active {
+    height: 100%;
+  }
   @include breakpoint(lg) {
+    padding: 2rem;
     height: 100vh;
     flex-direction: column;
     position: sticky;
   }
 }
+
 .o-site-brand {
   display: block;
-  margin:0 0 1rem;
-  padding: 2rem 0;
+  padding: 0;
   line-height: 1.25;
   text-transform: uppercase;
   font-size: 20px;
   &__logo {
-    width: 4rem;
+    width: 3rem;
     height: auto;
-    margin-bottom: 1rem;
-    
+    @include breakpoint(lg) {
+      width: 4rem;
+    }
   }
   &__name {
     color: color(light);

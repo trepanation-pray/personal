@@ -1,12 +1,35 @@
 .c-social-media {
-
-  margin-top: auto;
-  padding: 2rem 0;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: calc( 100% - 2rem);
+  transition: .5s 1s;
+  opacity: 0;
+  transform: translateY(-2rem);
+  .menu-active & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @include breakpoint(lg) {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    @include breakpoint(lg) {
+      justify-content: space-between;
+    }
   }
   &__item {
+    margin: 0 1rem;
+    @include breakpoint(lg) {
+      margin: 0;
+    }
   }
   &__link {
     display: block;
