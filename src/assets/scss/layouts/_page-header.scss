@@ -1,16 +1,21 @@
 .o-page-header {
-  margin-bottom: 2rem;
   display: block;
-  padding: 20rem 5rem 5rem 0;
-    background: {
+  padding: 5rem 1rem 1rem 0;
+  background: {
     image: url('../images/marble-ink-05.jpg');
     blend-mode: overlay;
     repeat: no-repeat;
     size: cover;
     attachment: fixed;
   }
+  @include breakpoint(md) {
+    padding: 10rem 2.5rem 2.5rem 0;
+  }
+  @include breakpoint(lg) {
+    padding: 20rem 5rem 5rem 0;
+  }
   &__content {
-    padding: 2rem;
+    padding: 1rem;
     display: inline-block;
     border-radius: 0 10px 10px 0;
     background: {
@@ -19,12 +24,25 @@
       repeat: no-repeat;
       size: 1000px;
     }
+    @include breakpoint(md) {
+      padding: 1.5rem;
+    }
+    @include breakpoint(lg) {
+      padding: 2rem;
+    }
   }
   &__title {
   }
   &__description {
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    margin-top: .25rem;
+    @include breakpoint(md) {
+      margin-top: .5rem;
+      font-size: 1.25rem;
+    }
+    @include breakpoint(lg) {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
     &:before {
       opacity: .5;
       margin-bottom: 1rem;

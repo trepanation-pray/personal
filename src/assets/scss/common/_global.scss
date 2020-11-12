@@ -4,8 +4,10 @@ body {
     family: 'Gotham', sans-serif;
     size: 16px;
   }
+  padding-top: 4.5rem;
   // grid-template-rows: [header] 20rem [content];
   @include breakpoint(lg) {
+    padding-top: 0;
     display: grid;
     grid-template-columns: [header] 20rem [content];
   }
@@ -16,22 +18,30 @@ body {
   }
 }
 
-main {
-  height: 100vh;
-}
 .o-main-content {
-  height: 5000px;
-  background: {
-    color: color(light);
-    image: url('../images/background.png');
-    repeat: no-repeat;
-    position: left 500px;
-  }
+
 }
 .o-content-wrap {
   padding: 2rem;
   max-width: 1000px;
+  height: 5000px; // Remove this later
+  // display: grid;
+  // grid-template-columns: repeat(2, 50% [content] );
+  background: {
+    color: color(light);
+    image: url('../images/background.png');
+    repeat: no-repeat;
+  }
+  
 }
+
 a {
   color: color(dark);
+}
+
+p {
+  padding: .5rem 0;
+  &:first-child {
+    padding-top: 0;
+  }
 }
