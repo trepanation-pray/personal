@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Steven Hill - Designer & Front End Developer
+title: About
 pageTitle: About me
 pageDescription: A little bit about me.
 headerColour: blue

@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Steven Hill - Designer & Front End Developer
+title: Designer & Front End Developer
 pageTitle: Steven Hill
 pageDescription: Creative Developer
 ---

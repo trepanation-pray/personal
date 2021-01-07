@@ -1,0 +1,13 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+  {% include "partials/page/header.njk" %}
+  <div class="o-content-wrap">
+    {{ content | safe }}
+  </div>
+  <ul>
+   {%- for post in collections.writings -%}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+   {%- endfor -%}
+  </ul>
+{% endblock %}

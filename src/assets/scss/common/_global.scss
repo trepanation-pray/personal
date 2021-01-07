@@ -1,5 +1,11 @@
 body {
-  background-color: color(light);
+
+  background: {
+    position: left top 500px;
+    color: color(light);
+    image: url('../images/background.png');
+    repeat: no-repeat;
+  }
   font: {
     family: 'Gotham', sans-serif;
     size: 16px;
@@ -10,6 +16,9 @@ body {
     padding-top: 0;
     display: grid;
     grid-template-columns: [header] 20rem [content];
+    background: {
+      position: left 300px top 500px;
+    }
   }
   color: color(dark);
   &.menu-active {
@@ -24,14 +33,10 @@ body {
 .o-content-wrap {
   padding: 2rem;
   max-width: 1000px;
-  height: 5000px; // Remove this later
+  // height: 5000px; // Remove this later
   // display: grid;
   // grid-template-columns: repeat(2, 50% [content] );
-  background: {
-    color: color(light);
-    image: url('../images/background.png');
-    repeat: no-repeat;
-  }
+
   
 }
 
