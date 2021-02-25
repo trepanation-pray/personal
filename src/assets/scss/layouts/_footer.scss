@@ -1,6 +1,11 @@
 .o-site-footer {
+  color: color(light);
   grid-column-start: content;
-  padding: 2rem 0;
-  margin: 0 2rem;
-  border-top: 2px solid color(dark,.5)
+  border-radius: 10px;
+  padding: 2rem;
+    background: {
+    color: color(dark);
+    image: url('../images/background-light.png');
+    repeat: no-repeat;
+  }
 }

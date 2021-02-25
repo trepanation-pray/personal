@@ -1,7 +1,7 @@
 body {
-
+  padding: 5.5rem 1rem 1rem;
   background: {
-    position: left top 500px;
+    // position: left top 500px;
     color: color(light);
     image: url('../images/background.png');
     repeat: no-repeat;
@@ -10,14 +10,17 @@ body {
     family: 'Gotham', sans-serif;
     size: 16px;
   }
-  padding-top: 4.5rem;
   // grid-template-rows: [header] 20rem [content];
+  @include breakpoint(md) {
+
+  }
   @include breakpoint(lg) {
-    padding-top: 0;
+    padding: 2rem;
     display: grid;
     grid-template-columns: [header] 20rem [content];
+    gap: 2rem;
     background: {
-      position: left 300px top 500px;
+      // position: left 300px top 500px;
     }
   }
   color: color(dark);
@@ -31,7 +34,7 @@ body {
 
 }
 .o-content-wrap {
-  padding: 2rem;
+  padding: 2rem 0;
   max-width: 1000px;
   // height: 5000px; // Remove this later
   // display: grid;

@@ -4,6 +4,7 @@ title: Example Project 2
 pageTitle: Project 2
 pageDescription: This is an example project.
 headerColour: purple
+order: 2
 tags:
   - Tag 1
   - Tag 3

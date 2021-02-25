@@ -3,7 +3,7 @@ layout: page
 title: About
 pageTitle: About me
 pageDescription: A little bit about me.
-headerColour: blue
+headerColour: orange
 ---
 A hybrid designer who codes, I understand the intricacies, nuances and challenges of designing for the multi-device web. I believe that successful design requires attention to detail at every level, from a wide-angle overview to a precise close-up perspective.
 
