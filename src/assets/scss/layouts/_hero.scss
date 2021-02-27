@@ -12,7 +12,8 @@
 .o-hero {
   height: calc(100vh - 8.5rem);
   width: 100%;
-  padding: 0 8rem;
+  position: relative;
+  padding: 0 2rem 0 8rem;
   animation: {
     iteration-count: infinite;
     duration: 60s;
@@ -21,7 +22,7 @@
   border-radius: 10px;
   background: {
     image: url('../images/marble-ink-05.jpg'),
-      linear-gradient(45deg, color(blue),color(orange),color(green),color(pink),color(purple),color(blue));
+      linear-gradient(45deg, color(blue),color(green),color(pink),color(purple),color(orange),color(blue));
     blend-mode: overlay;
     repeat: no-repeat;
     size: cover, 500% 100%;
@@ -36,6 +37,7 @@
   }
   &__content {
     position: relative;
+    max-width: 800px;
     // text-align: center;
     padding: 2rem;
     display: inline-block;
@@ -104,20 +106,40 @@
     z-index: 2;
   }
   &__circle {
-    z-index: 1;
     position: absolute;
     top: 50%;
     left: -4rem;
-    transform: translate(0,-50%);
+
     height: 400px;
     width: 400px;
     border-radius: 50%;
-    background: {
-      color: color(dark);
-      image: url('../images/background-light.png');
-      repeat: no-repeat;
-      // blend-mode: color-dodge;
-      size: 1000px;
+
+    &--1 {
+      z-index: 1;
+      transform: translate(0,-50%);
+      background: {
+        color: color(dark);
+        image: url('../images/background-light.png');
+        repeat: no-repeat;
+        // blend-mode: color-dodge;
+        size: 1000px;
+      }
+    }
+    &--2 {
+      z-index: 0;
+
+      transform: translate(-5%,-45%);
+      border: 3px dashed color(light,.75);
+    }
+  }
+  &__geo {
+    text-align: right;
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    font: {
+      weight: bold;
+      family: Courier, serif;
     }
   }
 }
