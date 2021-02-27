@@ -12,6 +12,7 @@
 .o-hero {
   height: calc(100vh - 8.5rem);
   width: 100%;
+  padding: 0 8rem;
   animation: {
     iteration-count: infinite;
     duration: 60s;
@@ -35,7 +36,7 @@
   }
   &__content {
     position: relative;
-    text-align: center;
+    // text-align: center;
     padding: 2rem;
     display: inline-block;
     color: color(light);
@@ -80,16 +81,43 @@
     //   }
     // }
   }
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
   &__description {
+    position: relative;
+    z-index: 2;
     color: color(light);
     margin-top: .25rem;
     @include breakpoint(md) {
-      margin-top: .5rem;
+      // margin-top: .25rem;
       font-size: 1.25rem;
     }
     @include breakpoint(lg) {
-      margin-top: 1rem;
+      margin-top: .5rem;
       font-size: 1.5rem;
+    }
+  }
+  &__body {
+    position: relative;
+    z-index: 2;
+  }
+  &__circle {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: -4rem;
+    transform: translate(0,-50%);
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: {
+      color: color(dark);
+      image: url('../images/background-light.png');
+      repeat: no-repeat;
+      // blend-mode: color-dodge;
+      size: 1000px;
     }
   }
 }

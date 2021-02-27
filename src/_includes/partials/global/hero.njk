@@ -2,5 +2,11 @@
   <div class="o-hero__content">
     <h1 class="o-hero__title">{{ pageTitle }}</h1>
     <p class="o-hero__description u-color--dark">{{ pageDescription }}</p>
+    <div class="o-hero__body">
+      {% block content %}
+        {{ content | safe }}
+      {% endblock %}
+    </div>
+    <div class="o-hero__circle"></div>
   </div>
 </header>
