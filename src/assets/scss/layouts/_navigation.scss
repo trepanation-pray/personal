@@ -105,6 +105,10 @@
     @include breakpoint(lg) {
       opacity: 1;
       transform: translatey(0);
+      padding: 1rem 0 .75rem;
+    }
+    @include breakpoint(xl) {
+      padding: 1.25rem 0 1rem;
     }
     & + & {
     }
@@ -148,14 +152,26 @@
     display: block;
     font: {
       weight: bold;
-      size: 1.5rem;
+      size: 1.25rem;
     }
-
+    @include breakpoint(xl) {
+      font: {
+        size: 1.5rem;
+      }
+    }
   }
   &__description {
     color: white;
     line-height: 1;
     text-shadow: 0 0 5px color(dark);
     display: inline-block;
+    font: {
+      size: .8rem;
+    }
+    @include breakpoint(lg) {
+      font: {
+        size: 1rem;
+      }
+    }
   }
 }

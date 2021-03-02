@@ -14,6 +14,7 @@
   width: 100%;
   position: relative;
   padding: 0 2rem 0 8rem;
+  margin-bottom: 1rem;
   animation: {
     iteration-count: infinite;
     duration: 60s;
@@ -34,6 +35,7 @@
   justify-content: center;
   @include breakpoint(lg) {
     height: calc(100vh - 4rem);
+    margin-bottom: 2rem;
   }
   &__content {
     position: relative;
@@ -86,6 +88,9 @@
   &__title {
     position: relative;
     z-index: 2;
+    @include breakpoint(md) {
+
+    }
   }
   &__description {
     position: relative;
@@ -96,7 +101,7 @@
       // margin-top: .25rem;
       font-size: 1.25rem;
     }
-    @include breakpoint(lg) {
+    @include breakpoint(xl) {
       margin-top: .5rem;
       font-size: 1.5rem;
     }
@@ -110,10 +115,13 @@
     top: 50%;
     left: -4rem;
 
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
-
+    @include breakpoint(md) {
+      height: 400px;
+    width: 400px;
+    }
     &--1 {
       z-index: 1;
       transform: translate(0,-50%);

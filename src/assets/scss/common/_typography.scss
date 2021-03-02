@@ -7,7 +7,7 @@ h1 {
   @include breakpoint(md) {
     font-size: 3rem;
   }
-  @include breakpoint(lg) {
+  @include breakpoint(xl) {
     font-size: 4rem;
   }
 }

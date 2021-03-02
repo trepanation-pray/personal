@@ -22,11 +22,14 @@
   }
   @include breakpoint(lg) {
     border-radius: 10px;
-    padding: 2rem;
+    padding: 1.5rem;
     top: 2rem;
     height: calc(100vh - 4rem );
     flex-direction: column;
     position: sticky;
+  }
+  @include breakpoint(xl) {
+    padding: 2rem;
   }
 }
 
