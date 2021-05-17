@@ -90,12 +90,16 @@
     transform: translatey(-2rem);
     @for $i from 1 through 10 {
       &:nth-child(#{$i}n) {
-        transition-delay: #{$i * .1 + .25}s;
-        transition-property: opacity, transform;
-        @include breakpoint(lg) {
-          transition-delay: 0s;
-        transition-property: opacity, transform;
+        transition: {
+          delay: #{$i * .1 + .25}s;
+          property: opacity, transform;
         }
+      }
+    }
+    @include breakpoint(lg) {
+      transition: {
+        delay: 0s;
+        property: opacity, transform;
       }
     }
     .menu-active & {
