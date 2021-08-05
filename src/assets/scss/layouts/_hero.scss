@@ -1,41 +1,25 @@
-@keyframes fade {
-  0% {
-    background-position: center, bottom left;
-  }
-  50% {
-    background-position: center, top right;
-  }
-  0% {
-    background-position: center, bottom left;
-  }
-}
 .o-hero {
-  height: calc(100vh - 8.5rem);
+  height: calc(100vh - 6.5rem);
   width: 100%;
   position: relative;
   padding: 0 2rem 0 8rem;
-  margin-bottom: 1rem;
-  animation: {
-    iteration-count: infinite;
-    duration: 60s;
-    name: fade;
-  }
   border-radius: 10px;
   background: {
-    image: url('../images/marble-ink-05.jpg'),
-      linear-gradient(45deg, color(blue),color(green),color(pink),color(purple),color(orange),color(blue));
     blend-mode: overlay;
     repeat: no-repeat;
-    size: cover, 500% 100%;
-    position: center, left;
-    attachment: fixed;
+    size: cover;
+    position: center;
   }
   display: flex;
   align-items: center;
   justify-content: center;
   @include breakpoint(lg) {
     height: calc(100vh - 4rem);
-    margin-bottom: 2rem;
+  }
+  @for $i from 1 through 5 {
+    &--#{$i} {
+      background-color: nth(nth($theme-colors, $i ),2);
+    }
   }
   &__content {
     position: relative;
@@ -139,6 +123,11 @@
       transform: translate(-5%,-45%);
       border: 3px dashed color(light,.75);
     }
+  }
+  &__copyright {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
   }
   &__geo {
     text-align: right;
