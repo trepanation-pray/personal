@@ -12,7 +12,12 @@
       {% block content %}
       {% endblock %}
     </main>
-    {% include "partials/global/footer.njk" %}
+    {%if page.fileSlug != '' %}
+
+      {% include "partials/global/footer.njk" %}
+
+    {% endif %}
+
     <script type="text/javascript" src="/assets/scripts/common.js"></script>
   </body>
 </html>
