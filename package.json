@@ -19,15 +19,19 @@
   },
   "homepage": "https://github.com/trepanation-pray/personal#readme",
   "scripts": {
-    "sass:process": "node-sass src/assets/scss -o dist/assets/css",
-    "sass:watch": "node-sass --watch src/assets/scss -o dist/assets/css",
-    "serve": "concurrently \"npx eleventy --serve\" \"npm run sass:watch\"",
-    "production": "npx eleventy && npm run sass:process"
+    "serve": "concurrently \"npx gulp start\" \"npx eleventy --serve\"",
+    "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npx gulp build"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "concurrently": "^5.1.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
     "node-sass": "^4.13.1",
-    "concurrently": "^5.1.0"
+    "sass": "^1.37.5"
   },
   "devDependencies": {
     "@trepanation-pray/svg-encode": "^1.1.1"

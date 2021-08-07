@@ -5,10 +5,7 @@ const navigation = require('./src/_data/navigation.json');
 module.exports = config => {
 
   // Watching for modificaions in style directory
-  config.addWatchTarget('./src/assets/scss/');
-  config.addPassthroughCopy('./src/assets/scripts/');
-  config.addPassthroughCopy('./src/assets/fonts/');
-  config.addPassthroughCopy('./src/assets/images/');
+  config.addWatchTarget('./src/assets/');
   config.addPassthroughCopy('./src/projects/images/*');
   config.addPassthroughCopy('./src/writing/images/*');
 
