@@ -119,11 +119,11 @@
     &--current {
       &:before {
         content: '';
-        height: 2.65rem;
-        width: .5rem;
+        height: 2.7rem;
+        width: .6rem;
         position: absolute;
-        top: 1.25rem;
-        left: -2rem;
+        top: 1.1rem;
+        left: -1.5rem;
         background: currentColor;
       }
     } 
@@ -154,13 +154,15 @@
   &__label {
     line-height: 1;
     display: block;
+    text-transform: uppercase;
+    font-family: "Din Condensed";
     font: {
       weight: bold;
-      size: 1.25rem;
+      size: 1.75rem;
     }
     @include breakpoint(xl) {
       font: {
-        size: 1.5rem;
+        size: 2rem;
       }
     }
   }

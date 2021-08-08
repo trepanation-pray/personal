@@ -19,3 +19,28 @@
 	src: url("../fonts/gotham-bold.woff2") format("woff2"),
 		url("../fonts/gotham-bold.woff") format("woff");
 }
+
+
+// Din
+
+@font-face {
+	font-family: "Din Condensed";
+	font-style: normal;
+	font-weight: bold;
+	src: url("../fonts/din-condensed.woff2") format("woff2"),
+		url("../fonts/din-condensed.woff") format("woff");
+}
+@font-face {
+	font-family: "Din";
+	font-style: normal;
+	font-weight: light;
+	src: url("../fonts/din-light.woff2") format("woff2"),
+		url("../fonts/din-light.woff") format("woff");
+}
+@font-face {
+	font-family: "Din";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/din-regular.woff2") format("woff2"),
+		url("../fonts/din-regular.woff") format("woff");
+}

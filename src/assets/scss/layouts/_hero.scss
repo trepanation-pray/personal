@@ -28,7 +28,7 @@
     padding: 2rem;
     display: inline-block;
     color: color(light);
-    text-shadow: 0 0 5px color(dark,.1), 0 0 10px color(dark,.1);
+   
     // border-radius: 10px;
     // background: color(dark);
     // background: {
@@ -72,6 +72,8 @@
   &__title {
     position: relative;
     z-index: 2;
+    color: transparent;
+    -webkit-text-stroke: 2px color(light);
     @include breakpoint(md) {
 
     }
@@ -83,16 +85,24 @@
     margin-top: .25rem;
     @include breakpoint(md) {
       // margin-top: .25rem;
+      font-size: 1.5rem;
+    }
+    @include breakpoint(xl) {
+      margin-top: .5rem;
+      font-size: 1.75rem;
+    }
+  }
+  &__body {
+    text-shadow: 0 0 5px color(dark,.1), 0 0 10px color(dark,.1);
+    position: relative;
+    z-index: 2;
+    @include breakpoint(md) {
       font-size: 1.25rem;
     }
     @include breakpoint(xl) {
       margin-top: .5rem;
       font-size: 1.5rem;
     }
-  }
-  &__body {
-    position: relative;
-    z-index: 2;
   }
   &__circle {
     position: absolute;

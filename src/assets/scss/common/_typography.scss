@@ -1,14 +1,15 @@
 h1,h2,h3,h4,h5,h6 {
   line-height: 1;
   text-transform: uppercase;
+  font-family: "Din Condensed";
 }
 h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   @include breakpoint(md) {
-    font-size: 3rem;
+    font-size:6rem;
   }
   @include breakpoint(xl) {
-    font-size: 4rem;
+    font-size: 8rem;
   }
 }
 h2 {
