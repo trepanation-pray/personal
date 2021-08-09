@@ -40,10 +40,10 @@
   text-transform: uppercase;
   font-size: 20px;
   &__logo {
-    width: 3rem;
-    height: auto;
+    height: 2.5rem;
+    width: auto;
     @include breakpoint(lg) {
-      width: 4rem;
+      height: 4rem;
     }
   }
   &__name {

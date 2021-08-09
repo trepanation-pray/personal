@@ -58,6 +58,7 @@
     color: color(light);
     margin-top: -1rem;
     opacity: .5;
+    font-weight: normal;
     @include breakpoint(md) {
       font-size: 1.75rem;
       margin-top: -1.25rem;

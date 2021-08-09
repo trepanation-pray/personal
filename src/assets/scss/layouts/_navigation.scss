@@ -125,6 +125,7 @@
         top: 1.4rem;
         left: -2rem;
         background: currentColor;
+        border-radius: 0 2px 2px 0;
       }
     } 
     &:nth-child(1){
@@ -157,7 +158,7 @@
     text-transform: uppercase;
     font-family: "Din Condensed";
     font: {
-      weight: bold;
+      // weight: normal;
       size: 1.75rem;
     }
     @include breakpoint(xl) {

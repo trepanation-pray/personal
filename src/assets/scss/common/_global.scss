@@ -9,6 +9,7 @@ body {
   font: {
     family: 'Din', sans-serif;
     size: 16px;
+    weight: 300;
   }
   // grid-template-rows: [header] 20rem [content];
   @include breakpoint(md) {
