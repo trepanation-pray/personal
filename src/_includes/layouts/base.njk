@@ -4,7 +4,7 @@
 	<head>
     {% include "partials/global/meta.njk" %}
 		<link rel="shortcut icon" href="/favicon.ico" />
-		<link href='/assets/css/main.css?{{ assetHash }}' rel='stylesheet' type='text/css'>
+		<link href='/assets/css/main.min.css?{{ assetHash }}' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
     <a href="#main-content" class="c-skip-to-content">Skip to the content</a>
@@ -19,6 +19,6 @@
 
     {% endif %}
 
-    <script type="text/javascript" src="/assets/scripts/common.js?{{ assetHash }}"></script>
+    <script type="text/javascript" src="/assets/scripts/common.min.js?{{ assetHash }}"></script>
   </body>
 </html>

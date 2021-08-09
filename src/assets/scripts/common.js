@@ -1,8 +1,11 @@
-// Randomise hero image and colour
-document.body.querySelector('.o-hero').style.backgroundImage = 
-'url("assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg"';
+import { fez } from '@trepanation-pray/fez';
+fez({ offset: 100 });
 
-document.body.querySelector('.o-hero').classList.add('o-hero--'+ (Math.floor(Math.random() * 5) + 1))
+// Randomise hero image and colour
+document.body.querySelector('.o-hero').style.backgroundImage =
+  'url("assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg"';
+
+document.body.querySelector('.o-hero').classList.add('o-hero--' + (Math.floor(Math.random() * 5) + 1))
 
 
 // Mobile navigation

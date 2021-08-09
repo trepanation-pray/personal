@@ -1,4 +1,5 @@
-const {dest, src} = require('gulp');
+const { dest, src } = require('gulp');
+const rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css');
 const sassProcessor = require('gulp-sass');
 
@@ -14,12 +15,13 @@ const sass = () => {
       cleanCSS(
         isProduction
           ? {
-              level: 2
-            }
+            level: 2
+          }
           : {}
       )
     )
-    .pipe(dest('./dist/assets/css', {sourceMaps: !isProduction}));
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(dest('./dist/assets/css', { sourceMaps: !isProduction }));
 };
 
 module.exports = sass;

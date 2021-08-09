@@ -27,13 +27,22 @@
     "concurrently": "^5.1.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^3.0.0",
     "node-sass": "^4.13.1",
+    "rollup": "^1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.37.5"
   },
   "devDependencies": {
-    "@trepanation-pray/svg-encode": "^1.1.1"
+    "@trepanation-pray/fez": "^1.1.0",
+    "@trepanation-pray/svg-encode": "^1.1.1",
+    "rollup-plugin-commonjs": "^10.1.0"
   }
 }
