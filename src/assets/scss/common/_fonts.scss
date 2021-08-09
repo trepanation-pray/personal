@@ -1,16 +1,25 @@
-// Din
+// Din Condensed
 
 @font-face {
 	font-family: "Din Condensed";
 	font-style: normal;
-	font-weight: bold;
+	font-weight: normal;
 	src: url("../fonts/din-condensed.woff2") format("woff2"),
 		url("../fonts/din-condensed.woff") format("woff");
 }
 @font-face {
+	font-family: "Din Condensed";
+	font-style: normal;
+	font-weight: 300;
+	src: url("../fonts/din-condensed-light.woff2") format("woff2"),
+		url("../fonts/din-condensed-light.woff") format("woff");
+}
+
+// Din
+@font-face {
 	font-family: "Din";
 	font-style: normal;
-	font-weight: light;
+	font-weight: 300;
 	src: url("../fonts/din-light.woff2") format("woff2"),
 		url("../fonts/din-light.woff") format("woff");
 }
