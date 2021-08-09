@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@babel/core": "^7.15.0",
     "concurrently": "^5.1.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -37,12 +38,12 @@
     "node-sass": "^4.13.1",
     "rollup": "^1",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.37.5"
   },
   "devDependencies": {
     "@trepanation-pray/fez": "^1.1.0",
-    "@trepanation-pray/svg-encode": "^1.1.1",
-    "rollup-plugin-commonjs": "^10.1.0"
+    "@trepanation-pray/svg-encode": "^1.1.1"
   }
 }
