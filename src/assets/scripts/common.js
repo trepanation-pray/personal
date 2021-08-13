@@ -28,7 +28,7 @@ window.addEventListener('resize', debounce( () => {
 
 // Mobile navigation
 
-document.body.addEventListener('click', function (event) {
+document.body.addEventListener('click', (event) => {
 
   if (!event.target.matches('.o-mobile-navigation-button')) return;
   event.preventDefault();
@@ -39,15 +39,17 @@ document.body.addEventListener('click', function (event) {
 
 }, false);
 
-const topNavList = document.body.querySelectorAll('.o-site-navigation a, .o-site-navigation button');
+// Tabble elements in mobile navigation
+
+const topNavList = document.body.querySelectorAll('.o-site-navigation a, .o-site-navigation button, .c-social-media a');
 
 // Mobile menu button tabbing for active and non-active state of menu
 
-document.body.addEventListener('keydown', function (event) {
+document.body.addEventListener('keydown', (event) => {
 
   if (!event.target.matches('.o-mobile-navigation-button')) return;
 
-  if (event.shiftKey && event.keyCode == 9) {
+  if ( event.key == 'Tab' && event.shiftKey) {
 
     if (event.target.classList.contains('is-active')) {
       event.preventDefault();
@@ -58,7 +60,7 @@ document.body.addEventListener('keydown', function (event) {
       document.body.querySelector('.o-site-header .o-site-brand').focus();
     }
 
-  } else if (event.keyCode == 9) {
+  } else if (event.key == 'Tab') {
     if (!event.target.classList.contains('is-active')) {
       event.preventDefault();
       document.body.querySelector('.o-main-content').focus();
@@ -67,33 +69,35 @@ document.body.addEventListener('keydown', function (event) {
 
 }, false);
 
-// Send tab focus from main content to menu button
+// Send tab focus from main content to menu button for mobile
 
-document.body.addEventListener('keydown', function (event) {
+document.body.addEventListener('keydown', (event) => {
 
   if (!event.target.matches('.o-main-content')) return;
-
-  if (event.shiftKey && event.keyCode == 9) {
-    event.preventDefault();
-    document.body.querySelector('.o-mobile-navigation-button').focus();
+  if(window.innerWidth < 992) {
+    if ( event.key == 'Tab' && event.shiftKey ) {
+      event.preventDefault();
+      document.body.querySelector('.o-mobile-navigation-button').focus();
+    }
+    
   }
 
 }, false);
 
-// Trap tabbing in menu
+// Trap tabbing in menu for mobile
 
-
-topNavList[topNavList.length - 1].addEventListener('keydown', function (event) {
-
-  if (event.shiftKey && event.keyCode == 9) {
-
-    if (event.target.classList.contains('is-active')) {
+topNavList[topNavList.length - 1].addEventListener('keydown', (event) => {
+  if(window.innerWidth < 992) {
+    if ( event.key == 'Tab' && event.shiftKey) {
+  
+      if (event.target.classList.contains('is-active')) {
+        event.preventDefault();
+        topNavList[topNavList.length - 2].focus();
+      }
+    } else if (event.key == 'Tab') {
       event.preventDefault();
-      topNavList[topNavList.length - 2].focus();
+      document.body.querySelector('.o-mobile-navigation-button').focus();
     }
-  } else if (event.keyCode == 9) {
-    event.preventDefault();
-    document.body.querySelector('.o-mobile-navigation-button').focus();
   }
 
 }, false);

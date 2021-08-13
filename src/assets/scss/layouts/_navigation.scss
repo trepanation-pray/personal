@@ -8,6 +8,9 @@
   border: none;
   position: relative;
   background: none;
+  &:focus {
+    background: red;
+  }
   &__text {
     position: absolute;
     right: calc( 100% + 1rem );
