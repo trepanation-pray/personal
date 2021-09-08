@@ -27,6 +27,7 @@
     "@babel/core": "^7.15.0",
     "concurrently": "^5.1.0",
     "del": "^6.0.0",
+    "focus-within-polyfill": "^5.2.1",
     "gulp": "^4.0.2",
     "gulp-better-rollup": "^4.0.1",
     "gulp-clean-css": "^4.3.0",
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@trepanation-pray/fez": "^1.1.0",
-    "@trepanation-pray/svg-encode": "^1.1.1"
+    "@trepanation-pray/svg-encode": "^1.1.1",
+    "focus-visible": "^5.2.0"
   }
 }

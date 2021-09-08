@@ -1,3 +1,5 @@
+import 'focus-within-polyfill'
+import 'focus-visible/dist/focus-visible.min.js';
 import { fez } from '@trepanation-pray/fez';
 fez({ offset: 100 });
 
@@ -7,26 +9,7 @@ document.body.querySelector('.o-hero').style.backgroundImage =
 
 document.body.querySelector('.o-hero').classList.add('o-hero--' + (Math.floor(Math.random() * 5) + 1))
 
-
- // Debounce
-function debounce(func, time){
-  var time = time || 100; // 100 by default if no param
-  var timer;
-  return (event) => {
-      if(timer) clearTimeout(timer);
-      timer = setTimeout(func, time, event);
-  };
-}
-
-window.addEventListener('resize', debounce( () => {
-  // console.log(window.innerHeight);
-  console.log(window.innerWidth);
-  if(window.innerWidth < 768) {
-    console.log('mobile');
-  }
-}, 250 ));
-
-// Mobile navigation
+// Mobile navigation button
 
 document.body.addEventListener('click', (event) => {
 
