@@ -1,16 +1,13 @@
 .o-mobile-navigation-button {
 	height: 2.5rem;
 	width: 2.5rem;
-	border-radius: 50%;
+	border-radius: 0.25rem;
 	z-index: 10;
 	transition: 0.5s;
 	outline: none;
   border: none;
   position: relative;
   background: none;
-  &:focus {
-    background: red;
-  }
   &__text {
     position: absolute;
     right: calc( 100% + 1rem );
@@ -23,7 +20,7 @@
     background: color(light);
     height: 3px;
     position: absolute;
-    left: 0;
+    left: 0.25rem;
     transition: 0.3s;
     pointer-events: none;
     border-radius: 10px;
@@ -68,6 +65,12 @@
 	&:focus {
 		outline: none;
 	}
+  &.focus-visible {
+    background-color: color(focus-background);
+    .o-mobile-navigation-button__bar {
+      background-color: color(focus-foreground);
+    }
+  }
 	@include breakpoint(lg) {
 		display: none;
 	}
@@ -112,10 +115,10 @@
     @include breakpoint(lg) {
       opacity: 1;
       transform: translatey(0);
-      padding: 1rem 0 .75rem;
+      padding: .75rem 0;
     }
     @include breakpoint(xl) {
-      padding: 1.25rem 0 1rem;
+      padding: 1rem 0;
     }
     & + & {
     }
@@ -150,10 +153,24 @@
   &__link {
     display: block;
     transition: .3s;
+    padding: 0.5rem;
+    margin: -0.5rem;
+    border-radius: 0.25rem;
     &:hover {
       transform: translateX(.25rem);
     }
     color: inherit;
+    &:focus {
+      outline: none;
+    }
+    &.focus-visible {
+      background-color: color(focus-background);
+      .o-site-navigation__label, 
+      .o-site-navigation__description {
+        color: color(focus-foreground);
+        text-shadow: none;
+      }
+    }
   }
   &__label {
     line-height: 1;
