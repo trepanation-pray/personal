@@ -4,7 +4,11 @@
   position: relative;
   padding: 0 2rem;
   border-radius: 10px;
-
+  transition: 1s;
+  opacity: 0;
+  &.is-loaded {
+    opacity: 1;
+  }
   background: {
     blend-mode: overlay;
     repeat: no-repeat;
@@ -35,6 +39,13 @@
         repeat: no-repeat;
         blend-mode: color-dodge;
         size: 1000px;
+      }
+      transition: 1s .5s;
+      transform: translateY(200px);
+      opacity: 0;
+      .is-loaded & {
+        transform: translateY(0);
+        opacity: 1;
       }
     @include breakpoint(md) {
       padding: 3rem;

@@ -4,10 +4,24 @@ import { fez } from '@trepanation-pray/fez';
 fez({ offset: 100 });
 
 // Randomise hero image and colour
-document.body.querySelector('.o-hero').style.backgroundImage =
-  'url("assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg"';
 
-document.body.querySelector('.o-hero').classList.add('o-hero--' + (Math.floor(Math.random() * 5) + 1))
+function load(src) {
+  return new Promise((resolve, reject) => {
+      const image = new Image();
+      image.addEventListener('load', resolve);
+      image.addEventListener('error', reject);
+      image.src = src;
+  });
+}
+
+const image =  'assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg';
+load(image).then(() => {
+  document.body.querySelector('.o-hero').style.backgroundImage = `url(${image})`;
+  document.body.querySelector('.o-hero').classList.add('o-hero--' + (Math.floor(Math.random() * 5) + 1))
+  document.body.querySelector('.o-hero').classList.add('is-loaded')
+});
+
+
 
 // Mobile navigation button
 
