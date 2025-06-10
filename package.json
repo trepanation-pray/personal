@@ -22,30 +22,17 @@
     "node": ">=20"
   },
   "scripts": {
-    "serve": "concurrently \"npx gulp start\" \"npx eleventy --serve\"",
-    "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npx gulp build"
+    "serve": "npx eleventy --serve",
+    "production": "rm -rf dist .11ty-vite && NODE_ENV=production npx eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.1",
     "@babel/core": "^7.15.0",
-    "concurrently": "^5.1.0",
-    "del": "^6.0.0",
-    "focus-within-polyfill": "^5.2.1",
-    "gulp": "^4.0.2",
-    "gulp-better-rollup": "^4.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^6.0.1",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-uglify-es": "^3.0.0",
-    "rollup": "^1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.89.2"
+    "focus-within-polyfill": "^5.2.1"
   },
   "devDependencies": {
+    "@11ty/eleventy-plugin-vite": "^6.0.0",
+    "vite": "^5.2.0",
     "@trepanation-pray/fez": "^1.1.0",
     "@trepanation-pray/svg-encode": "^1.1.1",
     "focus-visible": "^5.2.0"
