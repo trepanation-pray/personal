@@ -18,12 +18,15 @@
     "url": "https://github.com/trepanation-pray/personal/issues"
   },
   "homepage": "https://github.com/trepanation-pray/personal#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "serve": "concurrently \"npx gulp start\" \"npx eleventy --serve\"",
     "production": "NODE_ENV=production npx eleventy && NODE_ENV=production npx gulp build"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^3.1.1",
     "@babel/core": "^7.15.0",
     "concurrently": "^5.1.0",
     "del": "^6.0.0",
@@ -33,15 +36,14 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify-es": "^3.0.0",
-    "node-sass": "^4.13.1",
     "rollup": "^1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "sass": "^1.37.5"
+    "sass": "^1.89.2"
   },
   "devDependencies": {
     "@trepanation-pray/fez": "^1.1.0",
