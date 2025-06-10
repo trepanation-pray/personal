@@ -23,7 +23,7 @@
   },
   "scripts": {
     "serve": "npx eleventy --serve",
-    "production": "NODE_ENV=production npx eleventy"
+    "production": "rm -rf dist .11ty-vite && NODE_ENV=production npx eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.1",
