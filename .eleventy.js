@@ -2,12 +2,21 @@
 const site = require('./src/_data/site.json');
 const navigation = require('./src/_data/navigation.json');
 
-module.exports = config => {
+module.exports = async function (config) {
+  const EleventyVite = (await import("@11ty/eleventy-plugin-vite")).default;
 
   // Watching for modificaions in style directory
   config.addWatchTarget('./src/assets/');
   config.addPassthroughCopy('./src/projects/images/*');
   config.addPassthroughCopy('./src/writing/images/*');
+  config.addPassthroughCopy({ 'src/assets/fonts': 'assets/fonts' });
+  config.addPassthroughCopy({ 'src/assets/images': 'assets/images' });
+
+  config.addPlugin(EleventyVite, {
+    viteOptions: {
+      publicDir: 'src/assets'
+    }
+  });
 
   // Collections
 
