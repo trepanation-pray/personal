@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/trepanation-pray/personal#readme",
   "engines": {
-    "node": ">=20"
+    "node": ">=18"
   },
   "scripts": {
     "serve": "npx eleventy --serve",
