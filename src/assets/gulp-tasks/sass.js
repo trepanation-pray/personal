@@ -1,7 +1,8 @@
 const { dest, src } = require('gulp');
 const rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css');
-const sassProcessor = require('gulp-sass');
+const sassCompiler = require('sass');
+const sassProcessor = require('gulp-sass')(sassCompiler);
 
 // Flags whether we compress the output etc
 const isProduction = process.env.NODE_ENV === 'production';
