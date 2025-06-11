@@ -1,10 +1,12 @@
+@use "../common/colours";
+
 .o-site-footer {
-  color: color(light);
+  color: colours.color('light');
   grid-column-start: content;
   border-radius: 10px;
   padding: 2rem;
     background: {
-    color: color(dark);
+    color: colours.color('dark');
     image: url('../images/background-light.png');
     repeat: no-repeat;
   }

@@ -1,38 +1,38 @@
 
 // variables
-@import "common/variables";
+@use "common/variables";
 
-// Node modules
-@import "../../../node_modules/@trepanation-pray/svg-encode/main.scss";
+// // Node modules
+@use "../../../node_modules/@trepanation-pray/svg-encode/main.scss";
 
-// Functions
-@import "functions/breakpoints";
+// // Functions
+@use "functions/breakpoints";
 
-// Common
-@import "common/reset";
-
-
-@import "common/colours";
-
-@import "common/fonts";
-@import "common/typography";
-
-@import "common/helpers";
-@import "common/global";
+// // Common
+@use "common/reset";
 
 
-//Components
-@import "components/buttons";
-@import "components/pagination";
-@import "components/forms";
+@use "common/colours";
 
-// Layouts
-@import "layouts/header";
-@import "layouts/navigation";
-@import "layouts/social-media";
-@import "layouts/hero";
-@import "layouts/page-header";
-@import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
-@import "layouts/projects";
+@use "common/fonts";
+@use "common/typography";
+
+@use "common/helpers";
+@use "common/global";
+
+
+// //Components
+@use "components/buttons";
+@use "components/pagination";
+@use "components/forms";
+
+// // Layouts
+@use "layouts/header";
+@use "layouts/navigation";
+@use "layouts/social-media";
+@use "layouts/hero";
+@use "layouts/page-header";
+@use "layouts/footer";
+@use "layouts/pages";
+@use "layouts/posts";
+@use "layouts/projects";

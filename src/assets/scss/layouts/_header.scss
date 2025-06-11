@@ -1,3 +1,6 @@
+@use "../common/colours";
+@use "../functions/breakpoints";
+
 .o-site-header {
   padding: 1rem;
   position: relative;
@@ -11,7 +14,7 @@
   transition: .5s;
   overflow: hidden;
   background: {
-    color: color(dark);
+    color: colours.color('dark');
     image: url('../images/background-light.png');
     repeat: no-repeat;
   }
@@ -19,7 +22,7 @@
   &.is-active {
     height: 100%;
   }
-  @include breakpoint(lg) {
+  @include breakpoints.breakpoint(lg) {
     border-radius: 10px;
     padding: 1.5rem;
     top: 2rem;
@@ -27,7 +30,7 @@
     flex-direction: column;
     position: sticky;
   }
-  @include breakpoint(xl) {
+  @include breakpoints.breakpoint(xl) {
     padding: 2rem;
   }
 }
@@ -41,7 +44,7 @@
   padding: 0.5rem;
   margin: -0.5rem;
   width: 3.25rem;
-  @include breakpoint(lg) {
+  @include breakpoints.breakpoint(lg) {
     padding: 1rem;
     margin: -1rem;
     width: 6rem;
@@ -50,9 +53,9 @@
     outline: none;
   }
   &.focus-visible {
-    background-color: color(focus-background);
+    background-color: colours.color('focus-background');
     path {
-      fill: color(focus-foreground)
+      fill: colours.color('focus-foreground')
     }
   }
   &__logo {
@@ -60,12 +63,12 @@
     height: auto;
   }
   &__name {
-    color: color(light);
+    color: colours.color('light');
     display: none;
     font-weight: bold;
   }
   &__description {
-    color: color(pink);
+    color: colours.color('pink');
     display: none;
   }
 }

@@ -1,8 +1,11 @@
+@use "../functions/breakpoints";
+@use "colours";
+
 body {
   padding: 5.5rem 1rem 1rem;
   background: {
     // position: left top 500px;
-    color: color(light);
+    color: colours.color('light');
     image: url('../images/background.png');
     repeat: no-repeat;
   }
@@ -12,10 +15,11 @@ body {
     weight: 300;
   }
   // grid-template-rows: [header] 20rem [content];
-  @include breakpoint(md) {
+  color: colours.color('dark');
+  @include breakpoints.breakpoint(md) {
 
   }
-  @include breakpoint(lg) {
+  @include breakpoints.breakpoint(lg) {
     padding: 2rem;
     display: grid;
     grid-template-columns: [header] 20rem [content];
@@ -24,7 +28,7 @@ body {
       // position: left 300px top 500px;
     }
   }
-  color: color(dark);
+  
   &.menu-active {
     height: 100vh;
     overflow: hidden;

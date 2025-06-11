@@ -1,10 +1,9 @@
-{% set assetHash = global.random() %}
 <!DOCTYPE html>
 <html>
 	<head>
     {% include "partials/global/meta.njk" %}
 		<link rel="shortcut icon" href="/favicon.ico" />
-                <link href='/assets/main.css?{{ assetHash }}' rel='stylesheet' type='text/css'>
+    <link href='/assets/main.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
     <a href="#main-content" class="u-skip-content">Skip to the content</a>
@@ -19,6 +18,6 @@
 
     {% endif %}
 
-    <script type="module" src="/assets/main.js?{{ assetHash }}"></script>
+    <script type="module" src="/assets/main.js"></script>
   </body>
 </html>

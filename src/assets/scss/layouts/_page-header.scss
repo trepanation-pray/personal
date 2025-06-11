@@ -1,3 +1,6 @@
+@use "../common/colours";
+@use "../functions/breakpoints";
+
 .o-page-header {
   display: block;
   padding: 5rem 1rem .5rem 0;
@@ -9,33 +12,33 @@
     size: cover;
     attachment: fixed;
   }
-  @include breakpoint(md) {
+  @include breakpoints.breakpoint(md) {
     padding: 10rem 2.5rem 0 0;
   }
-  @include breakpoint(lg) {
+  @include breakpoints.breakpoint(lg) {
     padding: 20rem 5rem 1rem 0;
   }
   &__content {
-    text-shadow: 0 0 5px color(dark,.1), 0 0 10px color(dark,.1);
+    text-shadow: 0 0 5px colours.color(dark,.1), 0 0 10px colours.color(dark,.1);
     padding: 0 1rem;
     display: inline-block;
     border-radius: 0 10px 10px 0;
-    @include breakpoint(md) {
+    @include breakpoints.breakpoint(md) {
       padding: .5rem 1.5rem;
     }
-    @include breakpoint(lg) {
+    @include breakpoints.breakpoint(lg) {
       padding: 0 2rem;
     }
   }
   &__title {
-    color: color(light);
+    color: colours.color('light');
   }
   &__description {
-    color: color(light);
-    @include breakpoint(md) {
+    color: colours.color('light');
+    @include breakpoints.breakpoint(md) {
       font-size: 1.25rem;
     }
-    @include breakpoint(lg) {
+    @include breakpoints.breakpoint(lg) {
       font-size: 1.5rem;
     }
   }

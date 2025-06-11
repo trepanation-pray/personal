@@ -1,3 +1,6 @@
+@use "../common/colours";
+@use "../functions/breakpoints";
+
 .o-mobile-navigation-button {
 	height: 2.5rem;
 	width: 2.5rem;
@@ -12,12 +15,12 @@
     position: absolute;
     right: calc( 100% + 1rem );
     top: 0;
-    color: color(light);
+    color: colours.color('light');
     line-height: 2.5rem;
   }
   &__bar {
     display: block;
-    background: color(light);
+    background: colours.color('light');
     height: 3px;
     position: absolute;
     left: 0.25rem;
@@ -66,12 +69,12 @@
 		outline: none;
 	}
   &.focus-visible {
-    background-color: color(focus-background);
+    background-color: colours.color('focus-background');
     .o-mobile-navigation-button__bar {
-      background-color: color(focus-foreground);
+      background-color: colours.color('focus-foreground');
     }
   }
-	@include breakpoint(lg) {
+	@include breakpoints.breakpoint(lg) {
 		display: none;
 	}
 }
@@ -80,7 +83,7 @@
   position: absolute;
   top: 4.5rem;
   width: calc(100% - 2rem);
-  @include breakpoint(lg) {
+  @include breakpoints.breakpoint(lg) {
     top: 0;
     width: auto;
     position: relative;
@@ -90,7 +93,7 @@
   &__item {
     position: relative;
     padding: 1.25rem 0 1rem;
-    border-bottom: 2px solid color(light,.25);
+    border-bottom: 2px solid colours.color(light,.25);
     transition: .5s;
     opacity: 0;
     transform: translatey(-2rem);
@@ -102,7 +105,7 @@
         }
       }
     }
-    @include breakpoint(lg) {
+    @include breakpoints.breakpoint(lg) {
       transition: {
         delay: 0s;
         property: opacity, transform;
@@ -112,12 +115,12 @@
       opacity: 1;
       transform: translatey(0);
     }
-    @include breakpoint(lg) {
+    @include breakpoints.breakpoint(lg) {
       opacity: 1;
       transform: translatey(0);
       padding: .75rem 0;
     }
-    @include breakpoint(xl) {
+    @include breakpoints.breakpoint(xl) {
       padding: 1rem 0;
     }
     & + & {
@@ -135,19 +138,19 @@
       }
     } 
     &:nth-child(1){
-      color: color(blue);
+      color: colours.color('blue');
     }
     &:nth-child(2){
-      color: color(orange);
+      color: colours.color('orange');
     }
     &:nth-child(3){
-      color: color(green);
+      color: colours.color('green');
     }
     &:nth-child(4){
-      color: color(pink);
+      color: colours.color('pink');
     }
     &:nth-child(5){
-      color: color(purple);
+      color: colours.color('purple');
     }
   }
   &__link {
@@ -164,10 +167,10 @@
       outline: none;
     }
     &.focus-visible {
-      background-color: color(focus-background);
+      background-color: colours.color('focus-background');
       .o-site-navigation__label, 
       .o-site-navigation__description {
-        color: color(focus-foreground);
+        color: colours.color('focus-foreground');
         text-shadow: none;
       }
     }
@@ -181,7 +184,7 @@
       // weight: normal;
       size: 1.75rem;
     }
-    @include breakpoint(xl) {
+    @include breakpoints.breakpoint(xl) {
       font: {
         size: 2rem;
       }
@@ -190,12 +193,12 @@
   &__description {
     color: white;
     line-height: 1;
-    text-shadow: 0 0 5px color(dark);
+    text-shadow: 0 0 5px colours.color('dark');
     display: inline-block;
     font: {
       size: .8rem;
     }
-    @include breakpoint(lg) {
+    @include breakpoints.breakpoint(lg) {
       font: {
         size: 1rem;
       }

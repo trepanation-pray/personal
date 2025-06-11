@@ -1,3 +1,5 @@
+@use "colours";
+
 .u-skip-content {
 	position: fixed;
 	left: 0;
@@ -12,8 +14,8 @@
 		top: 6px;
 		left: 6px;
 		outline: none;
-		background-color: color(focus-background);
-		color: color(focus-foreground);
+		background-color: colours.color('focus-background');
+		color: colours.color('focus-foreground');
 		font-weight: bold;
 		padding: 10px;  
 	}

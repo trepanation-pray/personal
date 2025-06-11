@@ -1,13 +1,16 @@
+@use "sass:map";
+@use "variables";
+
 @function color( $key: 'blue', $opacity: 1) {
   @if( opacity == 1) {
-    @return map-get($theme-colors, $key);
+    @return map.get(variables.$theme-colors, $key);
   }
   @else {
-    @return rgba( map-get($theme-colors, $key), $opacity );
+    @return rgba( map.get(variables.$theme-colors, $key), $opacity );
   }
 }
 
-@each $color-name, $color-value in $theme-colors {
+@each $color-name, $color-value in variables.$theme-colors {
 	.u-color--#{$color-name} {
 		color: $color-value;
 		path & {

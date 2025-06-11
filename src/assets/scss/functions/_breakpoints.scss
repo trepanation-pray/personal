@@ -1,6 +1,10 @@
+@use "sass:map";
+@use "sass:string";
+@use "../common/variables";
+
 @mixin breakpoint($size) {
-  $min: map-get($breakpoints, $size);
-  @if (str-index($size, 'px')) {
+  $min: map.get(variables.$breakpoints, $size);
+  @if (string.index($size, 'px')) {
     @media (min-width: $size) {
       @content;
     }
