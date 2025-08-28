@@ -14,7 +14,7 @@ function load(src) {
   });
 }
 
-const image =  'assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg';
+const image =  '/assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg';
 load(image).then(() => {
   document.body.querySelector('.o-hero').style.backgroundImage = `url(${image})`;
   document.body.querySelector('.o-hero').classList.add('o-hero--' + (Math.floor(Math.random() * 5) + 1))
