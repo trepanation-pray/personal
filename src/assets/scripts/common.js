@@ -4,6 +4,13 @@ import { fez } from '@trepanation-pray/fez';
 fez({ offset: 100 });
 
 // Randomise hero image and colour
+import image1 from '../images/marble-ink-01.jpg';
+import image2 from '../images/marble-ink-02.jpg';
+import image3 from '../images/marble-ink-03.jpg';
+import image4 from '../images/marble-ink-04.jpg';
+import image5 from '../images/marble-ink-05.jpg';
+
+const images = [image1, image2, image3, image4, image5];
 
 function load(src) {
   return new Promise((resolve, reject) => {
@@ -14,11 +21,13 @@ function load(src) {
   });
 }
 
-const image =  'assets/images/marble-ink-0' + (Math.floor(Math.random() * 5) + 1) + '.jpg';
+const index = Math.floor(Math.random() * images.length);
+const image = images[index];
 load(image).then(() => {
-  document.body.querySelector('.o-hero').style.backgroundImage = `url(${image})`;
-  document.body.querySelector('.o-hero').classList.add('o-hero--' + (Math.floor(Math.random() * 5) + 1))
-  document.body.querySelector('.o-hero').classList.add('is-loaded')
+  const hero = document.body.querySelector('.o-hero');
+  hero.style.backgroundImage = `url(${image})`;
+  hero.classList.add(`o-hero--${index + 1}`);
+  hero.classList.add('is-loaded')
 });
 
 
